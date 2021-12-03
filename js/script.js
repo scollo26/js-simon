@@ -6,10 +6,6 @@
 // * Pensate prima in italiano.
 // * Dividete in piccoli problemi la consegna.
 // * Individuate gli elementi di cui avete bisogno per realizzare il programma.
-
-
-
-
 function random(min, max) {
 
     let listNumbers = [];
@@ -34,8 +30,7 @@ function random(min, max) {
 }
 
 
-
-// primo-timer
+// primo-timer 5 secondi e sparisce l'array 
 
 function timer(){
     let second = 0;
@@ -55,7 +50,6 @@ function timer(){
 
 }
 
-
 // secondo-timer2
 
 function timer2(){
@@ -65,16 +59,18 @@ function timer2(){
         
         let utente = [];
         let listUtente = [];
+
+        // inserimento numero in array
+
         for (let i = 0; i < 5; i++) {
             utente = parseInt(prompt('inserisci un numero'))
+            // push numero in arrey
             listUtente.push(utente);
-            console.log(listUtente);
-            
+            console.log(listUtente);  
         }
 
-        
-        
-
+  
+        // variabili per contare
         let risultato = [];
         let risultatoSbagliato = [];
         let vero = 0;
@@ -83,10 +79,9 @@ function timer2(){
         for (let i = 0; i < 5; i++) {
             console.log(numberRandom);
 
-            
+            // SE numero inserito di [i] è dentro numero random
             if(!(numberRandom.includes(listUtente[i]))) {
-                console.log('sbagliato');
-                // container.innerHTML ='non hai memorizato tutti i numeri';
+                // console.log('sbagliato');
                 risultatoSbagliato.push(listUtente[i]);
                 falso ++
 
@@ -95,10 +90,8 @@ function timer2(){
                 vero ++;
 
             }
-            
-        
-            
         }
+        // stampo in html il risultato
         container.innerHTML='numeri giusti ' + vero + '.... ' + risultato;
         container2.innerHTML='numeri sbagliati ' + falso + '.... ' + risultatoSbagliato;
         
@@ -107,28 +100,20 @@ function timer2(){
 
         
         clearInterval(timer2);
-    }, 10000);
+    }, 30000);
 }
-
-
-
-
-
-
-
-
 
 
 let container = document.getElementById('container');
 let container2 = document.getElementById('container2')
-const numberRandom = random(1, 5);
+const numberRandom = random(1, 100);
 console.log(numberRandom);
 
-
+// invoco le due funzioni
 let times = timer();
 
 let times2 = timer2();
-
+// stampo in html
 container.append(numberRandom);
 
 
