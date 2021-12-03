@@ -42,7 +42,7 @@ function timer(){
 
     const timer = setInterval(() => {
 
-        if (second < 30) {
+        if (second < 5) {
             second += 1;
             console.log(second);
         } else{
@@ -53,34 +53,11 @@ function timer(){
         }  
     }, 1000);
 
-    
-
-
 }
 
 
+// secondo-timer2
 
-
-
-
-
-let container = document.getElementById('container');
-let container2 = document.getElementById('container2')
-const numberRandom = random(1, 5);
-console.log(numberRandom);
-
-
-let times = timer();
-
-let times2 = timer2();
-
-container.append(numberRandom);
-
-
-
-
-
-    
 function timer2(){
 
     const timer2 = setTimeout(() => {
@@ -108,7 +85,7 @@ function timer2(){
             console.log(numberRandom);
 
             
-            if(!(listUtente[i] == numberRandom[i])){
+            if(!(listUtente == numberRandom[i])){
                 console.log('sbagliato');
                 // container.innerHTML ='non hai memorizato tutti i numeri';
                 risultatoSbagliato.push(listUtente[i]);
@@ -131,5 +108,32 @@ function timer2(){
 
         
         clearInterval(timer2);
-    }, 32000);
+    }, 10000);
 }
+
+
+
+
+
+
+
+
+
+
+let container = document.getElementById('container');
+let container2 = document.getElementById('container2')
+const numberRandom = random(1, 5);
+console.log(numberRandom);
+
+
+let times = timer();
+
+let times2 = timer2();
+
+container.append(numberRandom);
+
+
+
+
+
+    
