@@ -66,7 +66,6 @@ function timer2(){
         let utente = [];
         let listUtente = [];
         for (let i = 0; i < 5; i++) {
-            
             utente = parseInt(prompt('inserisci un numero'))
             listUtente.push(utente);
             console.log(listUtente);
@@ -85,7 +84,7 @@ function timer2(){
             console.log(numberRandom);
 
             
-            if(!(listUtente == numberRandom[i])){
+            if(!(numberRandom.includes(listUtente[i]))) {
                 console.log('sbagliato');
                 // container.innerHTML ='non hai memorizato tutti i numeri';
                 risultatoSbagliato.push(listUtente[i]);
